@@ -62,7 +62,7 @@ def test(data,
     niou = iouv.numel()
 
     # Dataloader
-    if dataloader is None:  # not training
+    if dataloader is None:  # not training 加载数据
         img = torch.zeros((1, 3, imgsz, imgsz), device=device)  # init img
         _ = model(img.half() if half else img) if device.type != 'cpu' else None  # run once
 
